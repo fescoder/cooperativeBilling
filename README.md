@@ -1,4 +1,5 @@
 # Facturación de Socios de Cooperativa
+# API para facturación de Clientes
 Este es un proyecto de facturación de la cooperativa en la que se registrarán los pagos de los socios, servicios y alquileres del salón de eventos.
 
 Arquitectura utilizada DDD - Domain Driven Design
@@ -22,6 +23,8 @@ Arquitectura utilizada DDD - Domain Driven Design
         - Spring Security
     - MapStruct
     - Gradle
+    - Testing:
+        - Pruebas unitarias con JUnit5
 
 - DDBB:
     - PostgreSQL
