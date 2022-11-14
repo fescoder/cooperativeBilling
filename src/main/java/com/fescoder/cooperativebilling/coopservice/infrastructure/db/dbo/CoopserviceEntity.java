@@ -1,15 +1,15 @@
 package com.fescoder.cooperativebilling.coopservice.infrastructure.db.dbo;
 
 import com.fescoder.cooperativebilling.customercoopservice.infrastructure.db.dbo.CustomerCoopserviceEntity;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Entity @Getter @Setter //@Builder
+@Entity @Getter @Setter @Builder
+@AllArgsConstructor @NoArgsConstructor
 @Table(name = "coopservices")
 public class CoopserviceEntity {
 

@@ -1,25 +1,25 @@
 package com.fescoder.cooperativebilling.customer.infrastructure.db.repository;
 
+import com.fescoder.cooperativebilling.customer.application.repository.CustomerRepository;
 import com.fescoder.cooperativebilling.customer.domain.Customer;
 import com.fescoder.cooperativebilling.customer.infrastructure.db.dbo.CustomerEntity;
 import com.fescoder.cooperativebilling.customer.infrastructure.db.mapper.CustomerEntityMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// CENTRO DE COMUNICACIÓN CON LA DB
-@Repository
-public class CustomerDboRepository implements com.fescoder.cooperativebilling.customer.application.repository.CustomerRepository {
-    @Autowired
-    private CustomerCrudRepository repository;
-    @Autowired
-    private CustomerEntityMapper mapper;
+@Service
+@RequiredArgsConstructor
+public class CustomerDboRepository implements CustomerRepository {
+
+    private final CustomerCrudRepository customerRepository;
+
+    private final CustomerEntityMapper customerMapper;
 
     @Override
     public List<Customer> getAllCustomers() {
-        List<CustomerEntity> customerEntityEntities = (List<CustomerEntity>) repository.findAll();
-        return mapper.toDomainList(customerEntityEntities);
+        List<CustomerEntity> customerEntityEntities = (List<CustomerEntity>) customerRepository.findAll();
+        return customerMapper.toDomainList(customerEntityEntities);
     }
 }

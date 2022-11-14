@@ -3,14 +3,14 @@ package com.fescoder.cooperativebilling.customercoopservice.infrastructure.db.db
 import com.fescoder.cooperativebilling.admin.infrastructure.db.dbo.AdminEntity;
 import com.fescoder.cooperativebilling.coopservice.infrastructure.db.dbo.CoopserviceEntity;
 import com.fescoder.cooperativebilling.customer.infrastructure.db.dbo.CustomerEntity;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Entity @Getter @Setter //@Builder
+@Entity @Getter @Setter @Builder
+@AllArgsConstructor @NoArgsConstructor
 @Table(name = "customers_coopservices")
 public class CustomerCoopserviceEntity {
 

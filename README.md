@@ -2,7 +2,7 @@
 # API para facturación de Clientes
 Este es un proyecto de facturación de la cooperativa en la que se registrarán los pagos de los socios, servicios y alquileres del salón de eventos.
 
-Arquitectura utilizada DDD - Domain Driven Design
+Arquitectura Hexagonal - Domain Driven Design
 
 ## Tecnologías utilizadas:
 - Frontend:
@@ -25,6 +25,7 @@ Arquitectura utilizada DDD - Domain Driven Design
     - Gradle
     - Testing:
         - Pruebas unitarias con JUnit5
+        - Mockito
 
 - DDBB:
     - PostgreSQL

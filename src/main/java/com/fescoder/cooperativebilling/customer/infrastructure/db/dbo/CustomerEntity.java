@@ -8,10 +8,9 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-// DESPUÉS CAMBIARLO POR @DATA PARA PROBAR FUNCIONAMIENTO
-@Entity @Getter @Setter
+@Entity @Getter @Setter @Builder
 // CONSTRUCTOR CON TODOS LOS ATRIBUTOS, OTRO SIN ATRIBUTOS Y BUILDER PARA CONSTRUIR NUEVAS INSTANCIAS MÁS FÁCIL
-//@AllArgsConstructor @NoArgsConstructor @Builder
+@AllArgsConstructor @NoArgsConstructor
 @Table(name = "customers")
 public class CustomerEntity {
 
